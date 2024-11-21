@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: banking-solution
+  mvc:
+    hidden-method:
+      filter:
+        enabled: true
+  profiles:
+    active: h2
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:format_sql: true
+
+springdoc:
+  show-actuator: true
+  default-produces-media-type: application/json
+  swagger-ui:
+    path: /api
+    operationsSorter: method
+
+logging:
+  level:
+    org:springframework:security=TRACE:
+
